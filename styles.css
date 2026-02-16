@@ -623,11 +623,15 @@ button {
 .solution-content {
   text-align: center;
   margin-bottom: 4rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .solution-content .section-body {
   margin-left: auto;
   margin-right: auto;
+  max-width: 700px;
 }
 
 .solution-pillars {
@@ -725,6 +729,7 @@ button {
   margin-bottom: 2rem;
   position: relative;
   z-index: 1;
+  animation: numberPulse 3s ease-in-out infinite;
 }
 
 .tech-featured .tech-card-title {
@@ -753,6 +758,15 @@ button {
 
   .tech-featured .tech-card-title {
     font-size: 1.8rem;
+  }
+}
+
+@keyframes numberPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(73, 179, 166, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 15px rgba(73, 179, 166, 0);
   }
 }
 
