@@ -476,6 +476,7 @@ button {
   .hero-stats {
     flex-direction: column;
     gap: 22px;
+    align-items: center;
   }
 }
 
@@ -486,6 +487,13 @@ button {
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .hero-stat {
+    min-width: auto;
+    width: auto;
+  }
 }
 
 .hero-stat:not(:last-child)::after {
