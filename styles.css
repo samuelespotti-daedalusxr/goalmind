@@ -410,6 +410,7 @@ button {
   position: relative;
   text-align: center;
   max-width: 900px;
+  margin: 0 auto;
   z-index: 1;
 }
 
@@ -423,7 +424,7 @@ button {
 }
 
 .hero-title {
-  font-size: clamp(1.75rem, 7vw, 5rem);
+  font-size: clamp(3.2rem, 8vw, 5rem);
   font-weight: 900;
   line-height: 1.05;
   letter-spacing: -0.03em;
@@ -462,16 +463,16 @@ button {
 }
 
 .hero-stats {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   align-items: center;
-  justify-items: center;
+  justify-content: center;
 }
 
 @media (min-width: 640px) {
   .hero-stats {
-    display: flex;
+    flex-wrap: nowrap;
     gap: 2rem;
   }
 }
@@ -625,7 +626,7 @@ button {
 }
 
 .brain-center-title {
-  font-size: 0.9rem;
+  font-size: clamp(0.75rem, 2.5vw, 0.9rem);
   font-weight: 800;
   letter-spacing: 0.15em;
   color: var(--teal);
@@ -766,6 +767,7 @@ button {
   color: var(--teal);
   letter-spacing: 0.1em;
   margin-bottom: 1.25rem;
+  text-align: center;
 }
 
 .tech-card-title {
@@ -820,6 +822,7 @@ button {
   color: var(--teal);
   letter-spacing: 0.1em;
   margin-bottom: 1.25rem;
+  text-align: center;
 }
 
 .tech-card-title {
@@ -1019,12 +1022,13 @@ button {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
-  align-items: start;
+  align-items: stretch;
 }
 
 @media (min-width: 768px) {
   .offer-grid {
     grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
   }
 }
 
@@ -1040,18 +1044,6 @@ button {
 .offer-card:first-child {
   border-color: var(--teal);
   position: relative;
-}
-
-.offer-card:first-child::before {
-  content: '';
-  position: absolute;
-  inset: -1px;
-  border-radius: 8px;
-  padding: 1px;
-  background: linear-gradient(135deg, var(--teal), var(--navy-light));
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
 }
 
 .offer-card-locked {
