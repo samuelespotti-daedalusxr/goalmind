@@ -1,17 +1,18 @@
 /* ============================================
    GOALMIND — Landing Page Interactions
+   Premium micro-interactions & scroll animations
    ============================================ */
 
 (function () {
   'use strict';
 
   // === Navbar scroll behavior ===
-  const navbar = document.getElementById('navbar');
-  let lastScroll = 0;
+  var navbar = document.getElementById('navbar');
+  var lastScroll = 0;
 
   function handleNavbarScroll() {
-    const currentScroll = window.scrollY;
-    if (currentScroll > 50) {
+    var currentScroll = window.scrollY;
+    if (currentScroll > 60) {
       navbar.classList.add('scrolled');
     } else {
       navbar.classList.remove('scrolled');
@@ -22,20 +23,21 @@
   window.addEventListener('scroll', handleNavbarScroll, { passive: true });
 
   // === Mobile menu toggle ===
-  const navToggle = document.getElementById('navToggle');
-  const navLinks = document.getElementById('navLinks');
+  var navToggle = document.getElementById('navToggle');
+  var navLinks = document.getElementById('navLinks');
 
   if (navToggle && navLinks) {
     navToggle.addEventListener('click', function () {
       navToggle.classList.toggle('open');
       navLinks.classList.toggle('open');
+      document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
     });
 
-    // Close menu on link click
     navLinks.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
         navToggle.classList.remove('open');
         navLinks.classList.remove('open');
+        document.body.style.overflow = '';
       });
     });
   }
@@ -57,8 +59,8 @@
         });
       },
       {
-        threshold: 0.15,
-        rootMargin: '0px 0px -50px 0px',
+        threshold: 0.1,
+        rootMargin: '0px 0px -60px 0px',
       }
     );
 
@@ -66,10 +68,57 @@
       observer.observe(el);
     });
   } else {
-    // Fallback: show all elements immediately
     animatedElements.forEach(function (el) {
       el.classList.add('visible');
     });
+  }
+
+  // === Animated counters for result cards ===
+  var counterElements = document.querySelectorAll('[data-count-to]');
+
+  if (counterElements.length > 0 && 'IntersectionObserver' in window) {
+    var counterObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            counterObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    counterElements.forEach(function (el) {
+      counterObserver.observe(el);
+    });
+  }
+
+  function animateCounter(el) {
+    var target = parseInt(el.getAttribute('data-count-to'), 10);
+    var suffix = el.getAttribute('data-count-suffix') || '';
+    var duration = 1800;
+    var startTime = null;
+
+    function easeOutQuart(t) {
+      return 1 - Math.pow(1 - t, 4);
+    }
+
+    function step(timestamp) {
+      if (!startTime) startTime = timestamp;
+      var progress = Math.min((timestamp - startTime) / duration, 1);
+      var easedProgress = easeOutQuart(progress);
+      var current = Math.round(easedProgress * target);
+      el.textContent = current + suffix;
+
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        el.textContent = target + suffix;
+      }
+    }
+
+    requestAnimationFrame(step);
   }
 
   // === FAQ Accordion ===
@@ -81,16 +130,20 @@
 
     question.addEventListener('click', function () {
       var isActive = item.classList.contains('active');
+      var expanded = !isActive;
 
       // Close all other items
       faqItems.forEach(function (other) {
         other.classList.remove('active');
+        var btn = other.querySelector('.faq-question');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
       });
 
       // Toggle current item
       if (!isActive) {
         item.classList.add('active');
       }
+      question.setAttribute('aria-expanded', String(expanded));
     });
   });
 
@@ -104,8 +157,8 @@
       if (!target) return;
 
       e.preventDefault();
-      var navHeight = navbar.offsetHeight;
-      var targetPosition = target.getBoundingClientRect().top + window.scrollY - navHeight;
+      var navHeight = navbar ? navbar.offsetHeight : 0;
+      var targetPosition = target.getBoundingClientRect().top + window.scrollY - navHeight - 20;
 
       window.scrollTo({
         top: targetPosition,
@@ -113,4 +166,28 @@
       });
     });
   });
+
+  // === Active nav link highlighting on scroll ===
+  var sections = document.querySelectorAll('section[id]');
+
+  function highlightNavOnScroll() {
+    var scrollY = window.scrollY + 120;
+
+    sections.forEach(function (section) {
+      var top = section.offsetTop;
+      var height = section.offsetHeight;
+      var id = section.getAttribute('id');
+
+      if (scrollY >= top && scrollY < top + height) {
+        document.querySelectorAll('.nav-links a').forEach(function (link) {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + id) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  }
+
+  window.addEventListener('scroll', highlightNavOnScroll, { passive: true });
 })();

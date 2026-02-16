@@ -4,10 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GOALMIND — Train the Invisible. Dominate the Visible.</title>
-  <meta name="description" content="Il primo sistema italiano di allenamento cognitivo-motorio in realt&agrave; virtuale per il calcio d'&eacute;lite. Basato sulle neuroscienze. Progettato per vincere.">
+  <meta name="description" content="Il primo sistema italiano di allenamento cognitivo-motorio in realtà virtuale per il calcio d'élite. Basato sulle neuroscienze. Progettato per vincere.">
+  <meta name="theme-color" content="#082B4C">
+  <meta property="og:title" content="GOALMIND — Train the Invisible. Dominate the Visible.">
+  <meta property="og:description" content="Allenamento cognitivo-motorio in VR per il calcio d'élite. Basato sulle neuroscienze.">
+  <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,7 +20,7 @@
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="#" class="nav-logo">GOAL<span>MIND</span></a>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <button class="nav-toggle" id="navToggle" aria-label="Apri menu di navigazione">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks">
@@ -24,7 +28,7 @@
         <li><a href="#scienza">Scienza</a></li>
         <li><a href="#risultati">Risultati</a></li>
         <li><a href="#offerta">Offerta</a></li>
-        <li><a href="#contatti">Contatti</a></li>
+        <li><a href="#carriere">Carriere</a></li>
         <li><a href="#contatti" class="nav-cta">Richiedi Accesso</a></li>
       </ul>
     </div>
@@ -33,70 +37,93 @@
   <!-- ========== HERO ========== -->
   <section class="hero" id="hero">
     <div class="hero-bg-grid"></div>
+    <div class="hero-gradient-orb hero-orb-1"></div>
+    <div class="hero-gradient-orb hero-orb-2"></div>
     <div class="hero-content">
-      <p class="hero-eyebrow" data-animate="fade-up">Cognitive-Motor Training in VR</p>
+      <div class="hero-eyebrow-wrap" data-animate="fade-up">
+        <span class="hero-eyebrow-line"></span>
+        <p class="hero-eyebrow">Cognitive-Motor Training in Virtual Reality</p>
+        <span class="hero-eyebrow-line"></span>
+      </div>
       <h1 class="hero-title" data-animate="fade-up" data-delay="100">
         Train the Invisible.<br>
         <span class="text-accent">Dominate the Visible.</span>
       </h1>
       <p class="hero-subtitle" data-animate="fade-up" data-delay="200">
         Il primo sistema italiano di allenamento cognitivo-motorio<br>
-        in realt&agrave; virtuale per il calcio d'&eacute;lite.
+        in realtà virtuale per il calcio d'élite.<br>
+        <strong>Basato sulle neuroscienze. Progettato per vincere.</strong>
       </p>
       <div class="hero-ctas" data-animate="fade-up" data-delay="300">
-        <a href="#contatti" class="btn btn-primary">Richiedi una Demo</a>
+        <a href="#contatti" class="btn btn-primary btn-glow">
+          <span>Richiedi una Demo</span>
+          <svg class="btn-arrow" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
         <a href="#tecnologia" class="btn btn-ghost">Scopri la Tecnologia</a>
       </div>
       <div class="hero-stats" data-animate="fade-up" data-delay="400">
         <div class="hero-stat">
-          <span class="hero-stat-value">+12%</span>
-          <span class="hero-stat-label">Velocit&agrave; decisionale</span>
+          <span class="hero-stat-value" data-counter="+12">+12<span class="hero-stat-unit">%</span></span>
+          <span class="hero-stat-label">Velocità decisionale</span>
         </div>
         <div class="hero-stat-divider"></div>
         <div class="hero-stat">
-          <span class="hero-stat-value">+14%</span>
-          <span class="hero-stat-label">Reattivit&agrave; muscolare</span>
+          <span class="hero-stat-value" data-counter="+14">+14<span class="hero-stat-unit">%</span></span>
+          <span class="hero-stat-label">Reattività muscolare</span>
         </div>
         <div class="hero-stat-divider"></div>
         <div class="hero-stat">
-          <span class="hero-stat-value">-89%</span>
+          <span class="hero-stat-value" data-counter="-89">-89<span class="hero-stat-unit">%</span></span>
           <span class="hero-stat-label">Errori sotto pressione</span>
         </div>
       </div>
     </div>
-    <div class="hero-scroll-indicator">
+    <div class="hero-scroll-indicator" data-animate="fade-up" data-delay="600">
       <span>Scroll</span>
       <div class="scroll-line"></div>
     </div>
   </section>
 
-  <!-- ========== PROBLEMA ========== -->
-  <section class="section section-problem" id="problema">
+  <!-- ========== MANIFESTO (Problema) ========== -->
+  <section class="section section-manifesto" id="problema">
     <div class="container">
-      <div class="problem-grid">
-        <div class="problem-text" data-animate="fade-up">
+      <div class="manifesto-grid">
+        <div class="manifesto-text" data-animate="fade-up">
           <p class="section-eyebrow">Il problema</p>
-          <h2 class="section-title">Il calcio &egrave; uno sport<br><span class="text-accent">cognitivo.</span></h2>
+          <h2 class="section-title">
+            Il calcio è uno sport<br><span class="text-accent">cognitivo.</span>
+          </h2>
           <p class="section-body">
-            Ogni partita &egrave; una sequenza di migliaia di micro-decisioni. Leggere lo spazio, anticipare il movimento di un avversario, scegliere il passaggio in 200 millisecondi.
+            Ogni partita è una sequenza di migliaia di micro-decisioni. Leggere lo spazio, anticipare il movimento di un avversario, scegliere il passaggio giusto in 200 millisecondi.
           </p>
           <p class="section-body">
-            Eppure, il 95% dell'allenamento &egrave; ancora solo fisico e tecnico.
+            Eppure, il <strong>95% dell'allenamento</strong> è ancora solo fisico e tecnico.
           </p>
-          <p class="section-body highlight-text">
+          <blockquote class="manifesto-quote">
             Il cervello &mdash; l'organo che comanda ogni azione sul campo &mdash; non viene mai allenato in modo specifico.
+          </blockquote>
+          <p class="section-body section-body-dim">
+            Fino a oggi.
           </p>
         </div>
-        <div class="problem-visual" data-animate="fade-up" data-delay="200">
-          <div class="brain-diagram">
-            <div class="brain-circle brain-circle-outer"></div>
-            <div class="brain-circle brain-circle-mid"></div>
-            <div class="brain-circle brain-circle-inner"></div>
-            <div class="brain-label brain-label-1">Decisione</div>
-            <div class="brain-label brain-label-2">Anticipazione</div>
-            <div class="brain-label brain-label-3">Esecuzione</div>
-            <div class="brain-label brain-label-4">Percezione</div>
+        <div class="manifesto-visual" data-animate="fade-up" data-delay="200">
+          <div class="neuro-diagram">
+            <div class="neuro-ring neuro-ring-outer">
+              <span class="neuro-ring-label">Percezione</span>
+            </div>
+            <div class="neuro-ring neuro-ring-mid">
+              <span class="neuro-ring-label">Decisione</span>
+            </div>
+            <div class="neuro-ring neuro-ring-inner">
+              <span class="neuro-ring-label">Azione</span>
+            </div>
+            <div class="neuro-core">
+              <span class="neuro-core-text">NEXT</span>
+            </div>
+            <div class="neuro-pulse"></div>
+            <div class="neuro-pulse neuro-pulse-delayed"></div>
           </div>
+          <p class="neuro-diagram-caption">Neuro Execution Time &mdash; Il tempo tra stimolo e risposta ottimale</p>
         </div>
       </div>
     </div>
@@ -104,35 +131,43 @@
 
   <!-- ========== SOLUZIONE ========== -->
   <section class="section section-solution">
+    <div class="section-divider-top"></div>
     <div class="container">
       <div class="solution-content" data-animate="fade-up">
         <p class="section-eyebrow">La soluzione</p>
-        <h2 class="section-title">GOALMIND non sostituisce<br>l'allenamento fisico.<br><span class="text-accent">Lo completa.</span></h2>
-        <p class="section-body section-body-large">
-          Alleniamo il sistema nervoso. Riduciamo il tempo che intercorre tra percezione, decisione e azione. Lo chiamiamo <strong>Neuro Execution Time</strong> &mdash; e lo miglioriamo sessione dopo sessione.
+        <h2 class="section-title section-title-centered">
+          GOALMIND non sostituisce<br>l'allenamento fisico.<br>
+          <span class="text-accent">Lo completa.</span>
+        </h2>
+        <p class="section-body section-body-large section-body-centered">
+          Alleniamo il sistema nervoso. Riduciamo il tempo che intercorre tra percezione, decisione e azione.
+          Lo chiamiamo <strong>Neuro Execution Time</strong> &mdash; e lo miglioriamo sessione dopo sessione.
         </p>
       </div>
       <div class="solution-pillars" data-animate="fade-up" data-delay="200">
         <div class="pillar">
+          <div class="pillar-number">01</div>
           <div class="pillar-icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="20" stroke="#49B3A6" stroke-width="2"/><path d="M24 14v10l7 7" stroke="#49B3A6" stroke-width="2" stroke-linecap="round"/></svg>
+            <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.5"/><circle cx="24" cy="24" r="4" fill="currentColor"/><path d="M24 4v8M24 36v8M4 24h8M36 24h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
           </div>
           <h3 class="pillar-title">Percezione</h3>
-          <p class="pillar-text">Scenari VR ad alta intensit&agrave; cognitiva che simulano situazioni reali di gioco.</p>
+          <p class="pillar-text">Scenari VR ad alta intensità cognitiva che simulano la pressione decisionale di una partita reale.</p>
         </div>
         <div class="pillar">
+          <div class="pillar-number">02</div>
           <div class="pillar-icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 4L4 14v20l20 10 20-10V14L24 4z" stroke="#49B3A6" stroke-width="2"/><path d="M24 24v20M4 14l20 10 20-10" stroke="#49B3A6" stroke-width="2"/></svg>
+            <svg viewBox="0 0 48 48" fill="none"><path d="M24 4L4 14v20l20 10 20-10V14L24 4z" stroke="currentColor" stroke-width="1.5"/><path d="M24 24v20M4 14l20 10 20-10" stroke="currentColor" stroke-width="1.5"/></svg>
           </div>
           <h3 class="pillar-title">Decisione</h3>
-          <p class="pillar-text">Algoritmo adattivo che calibra la difficolt&agrave; in tempo reale sulle tue capacit&agrave;.</p>
+          <p class="pillar-text">Algoritmo adattivo che calibra la difficoltà in tempo reale sulle tue capacità cognitive.</p>
         </div>
         <div class="pillar">
+          <div class="pillar-number">03</div>
           <div class="pillar-icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 34l10-10 10 10M14 24l10-10 10 10" stroke="#49B3A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg viewBox="0 0 48 48" fill="none"><path d="M14 34l10-10 10 10M14 24l10-10 10 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
           <h3 class="pillar-title">Azione</h3>
-          <p class="pillar-text">Ogni movimento diventa dato. Ogni decisione &egrave; misurabile e migliorabile.</p>
+          <p class="pillar-text">Ogni movimento diventa dato. Ogni decisione è misurabile. Ogni sessione è un passo avanti.</p>
         </div>
       </div>
     </div>
@@ -143,38 +178,63 @@
     <div class="container">
       <div class="tech-header" data-animate="fade-up">
         <p class="section-eyebrow">La tecnologia</p>
-        <h2 class="section-title">Hardware di ultima generazione.<br><span class="text-accent">Software costruito sulle neuroscienze.</span></h2>
+        <h2 class="section-title section-title-centered">
+          Hardware di ultima generazione.<br>
+          <span class="text-accent">Software costruito sulle neuroscienze.</span>
+        </h2>
+        <p class="section-body section-body-centered">
+          Ogni componente del sistema GOALMIND è progettato per un unico obiettivo: rendere misurabile e allenabile ciò che fino a oggi era invisibile.
+        </p>
       </div>
       <div class="tech-grid">
         <div class="tech-card" data-animate="fade-up" data-delay="0">
-          <div class="tech-card-number">01</div>
+          <div class="tech-card-header">
+            <span class="tech-card-number">01</span>
+            <div class="tech-card-line"></div>
+          </div>
           <h3 class="tech-card-title">Scenari VR immersivi</h3>
-          <p class="tech-card-text">Ambienti ad alta intensit&agrave; cognitiva che ricreano la pressione decisionale di una partita reale. Ogni scenario &egrave; calibrato per attivare specifici circuiti neurali.</p>
+          <p class="tech-card-text">Ambienti ad alta intensità cognitiva che ricreano la pressione decisionale di una partita reale. Ogni scenario è calibrato per attivare specifici circuiti neurali.</p>
         </div>
-        <div class="tech-card" data-animate="fade-up" data-delay="100">
-          <div class="tech-card-number">02</div>
+        <div class="tech-card" data-animate="fade-up" data-delay="80">
+          <div class="tech-card-header">
+            <span class="tech-card-number">02</span>
+            <div class="tech-card-line"></div>
+          </div>
           <h3 class="tech-card-title">Algoritmo adattivo</h3>
-          <p class="tech-card-text">Il sistema apprende dal tuo profilo cognitivo e modula la complessit&agrave; degli scenari in tempo reale. Nessuna sessione &egrave; uguale alla precedente.</p>
+          <p class="tech-card-text">Il sistema apprende dal tuo profilo cognitivo e modula la complessità degli scenari in tempo reale. Nessuna sessione è uguale alla precedente.</p>
         </div>
-        <div class="tech-card" data-animate="fade-up" data-delay="200">
-          <div class="tech-card-number">03</div>
+        <div class="tech-card" data-animate="fade-up" data-delay="160">
+          <div class="tech-card-header">
+            <span class="tech-card-number">03</span>
+            <div class="tech-card-line"></div>
+          </div>
           <h3 class="tech-card-title">Metriche real-time</h3>
-          <p class="tech-card-text">Tempo di reazione, accuratezza decisionale, indice di anticipazione, controllo dell'errore. Tutto misurato. Tutto tracciato. Tutto migliorabile.</p>
+          <p class="tech-card-text">Tempo di reazione, accuratezza decisionale, indice di anticipazione, controllo dell'errore. Tutto misurato, tutto tracciato, tutto migliorabile.</p>
         </div>
-        <div class="tech-card" data-animate="fade-up" data-delay="300">
-          <div class="tech-card-number">04</div>
+        <div class="tech-card" data-animate="fade-up" data-delay="240">
+          <div class="tech-card-header">
+            <span class="tech-card-number">04</span>
+            <div class="tech-card-line"></div>
+          </div>
           <h3 class="tech-card-title">Tracking multi-modale</h3>
           <p class="tech-card-text">Visore di ultima generazione con tracking oculare, posturale e motorio. Ogni micro-movimento racconta una storia sulla tua performance cognitiva.</p>
         </div>
-        <div class="tech-card" data-animate="fade-up" data-delay="400">
-          <div class="tech-card-number">05</div>
+        <div class="tech-card tech-card-featured" data-animate="fade-up" data-delay="320">
+          <div class="tech-card-header">
+            <span class="tech-card-number">05</span>
+            <div class="tech-card-line"></div>
+          </div>
           <h3 class="tech-card-title">NEXT &mdash; Neuro Execution Time</h3>
-          <p class="tech-card-text">La metrica proprietaria che misura il tempo tra stimolo e risposta ottimale. Ridurre il NEXT significa decidere prima, agire meglio, dominare il campo.</p>
+          <p class="tech-card-text">La metrica proprietaria GOALMIND. Misura il tempo tra stimolo e risposta ottimale. Ridurre il NEXT significa decidere prima, agire meglio, dominare il campo.</p>
+          <div class="tech-card-tag">Metrica proprietaria</div>
         </div>
-        <div class="tech-card" data-animate="fade-up" data-delay="500">
-          <div class="tech-card-number">06</div>
-          <h3 class="tech-card-title">Plasticit&agrave; neurale applicata</h3>
-          <p class="tech-card-text">Protocolli basati sulla capacit&agrave; del cervello di riorganizzarsi. Allenamento strutturato per creare nuovi pattern neurali pi&ugrave; efficienti.</p>
+        <div class="tech-card" data-animate="fade-up" data-delay="400">
+          <div class="tech-card-header">
+            <span class="tech-card-number">06</span>
+            <div class="tech-card-line"></div>
+          </div>
+          <h3 class="tech-card-title">Plasticità neurale applicata</h3>
+          <p class="tech-card-text">Protocolli basati sulla capacità del cervello di riorganizzarsi. Allenamento strutturato per creare nuovi pattern neurali più efficienti.</p>
         </div>
       </div>
     </div>
@@ -186,19 +246,22 @@
       <div class="science-grid">
         <div class="science-text" data-animate="fade-up">
           <p class="section-eyebrow">La scienza</p>
-          <h2 class="section-title">Non &egrave; un'opinione.<br><span class="text-accent">&Egrave; ricerca.</span></h2>
+          <h2 class="section-title">Non è un'opinione.<br><span class="text-accent">È ricerca.</span></h2>
           <p class="section-body">
-            GOALMIND nasce dalla ricerca del <strong>Laboratorio di Neuroscienze Cognitive e dell'Azione</strong> dell'Universit&agrave; di Roma Foro Italico.
+            GOALMIND nasce dalla ricerca del <strong>Laboratorio di Neuroscienze Cognitive e dell'Azione</strong> dell'Università di Roma Foro Italico.
           </p>
           <p class="section-body">
-            Il protocollo <strong>CMDT-VR</strong> (Cognitive-Motor Dual-Task in Virtual Reality) &egrave; stato sviluppato e validato in ambito accademico prima di diventare un prodotto.
+            Il protocollo <strong>CMDT-VR</strong> (Cognitive-Motor Dual-Task in Virtual Reality) è stato sviluppato e validato in ambito accademico prima di diventare un prodotto.
+          </p>
+          <p class="section-body">
+            Non partiamo dal mercato. Partiamo dalla scienza.
           </p>
           <div class="science-badge">
             <div class="science-badge-icon">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 7v10l10 5 10-5V7L12 2z" stroke="#49B3A6" stroke-width="1.5"/><path d="M12 12v10M2 7l10 5 10-5" stroke="#49B3A6" stroke-width="1.5"/></svg>
+              <svg viewBox="0 0 32 32" fill="none"><path d="M16 2L3 9v14l13 7 13-7V9L16 2z" stroke="#49B3A6" stroke-width="1.5"/><path d="M16 16v14M3 9l13 7 13-7" stroke="#49B3A6" stroke-width="1.5"/><circle cx="16" cy="16" r="3" stroke="#49B3A6" stroke-width="1.5"/></svg>
             </div>
             <div>
-              <strong>Universit&agrave; di Roma Foro Italico</strong><br>
+              <strong>Università di Roma Foro Italico</strong>
               <span>Laboratorio di Neuroscienze Cognitive e dell'Azione</span>
             </div>
           </div>
@@ -209,15 +272,15 @@
             <li>
               <span class="science-list-icon"></span>
               <div>
-                <strong>Velocit&agrave; decisionale</strong>
-                <p>Decisioni pi&ugrave; rapide sotto pressione temporale e cognitiva.</p>
+                <strong>Velocità decisionale</strong>
+                <p>Decisioni più rapide sotto pressione temporale e cognitiva.</p>
               </div>
             </li>
             <li>
               <span class="science-list-icon"></span>
               <div>
                 <strong>Funzioni esecutive</strong>
-                <p>Pianificazione, inibizione, flessibilit&agrave; cognitiva potenziate.</p>
+                <p>Pianificazione, inibizione, flessibilità cognitiva potenziate.</p>
               </div>
             </li>
             <li>
@@ -231,14 +294,14 @@
               <span class="science-list-icon"></span>
               <div>
                 <strong>Controllo dell'errore</strong>
-                <p>Riduzione drastica degli errori in situazioni ad alta complessit&agrave;.</p>
+                <p>Riduzione drastica degli errori in situazioni ad alta complessità.</p>
               </div>
             </li>
             <li>
               <span class="science-list-icon"></span>
               <div>
                 <strong>Efficienza motoria</strong>
-                <p>Gesti tecnici pi&ugrave; precisi grazie a un sistema nervoso pi&ugrave; reattivo.</p>
+                <p>Gesti tecnici più precisi grazie a un sistema nervoso più reattivo.</p>
               </div>
             </li>
             <li>
@@ -259,29 +322,54 @@
     <div class="container">
       <div class="results-header" data-animate="fade-up">
         <p class="section-eyebrow">I risultati</p>
-        <h2 class="section-title">Numeri, non promesse.</h2>
+        <h2 class="section-title section-title-centered">Numeri, non promesse.</h2>
+        <p class="section-body section-body-centered">
+          Dati misurati. Validati dalla ricerca. Replicabili.
+        </p>
       </div>
       <div class="results-grid" data-animate="fade-up" data-delay="100">
         <div class="result-card">
-          <span class="result-value" data-count="12">+12%</span>
-          <span class="result-label">Velocit&agrave; decisionale</span>
-          <p class="result-desc">Decisioni pi&ugrave; rapide in scenari ad alta pressione cognitiva.</p>
+          <div class="result-card-glow"></div>
+          <span class="result-prefix">+</span>
+          <span class="result-value" data-count-to="12" data-count-suffix="%">0%</span>
+          <span class="result-label">Velocità decisionale</span>
+          <p class="result-desc">Decisioni più rapide in scenari ad alta pressione cognitiva.</p>
         </div>
         <div class="result-card">
-          <span class="result-value" data-count="14">+14%</span>
-          <span class="result-label">Reattivit&agrave; muscolare</span>
+          <div class="result-card-glow"></div>
+          <span class="result-prefix">+</span>
+          <span class="result-value" data-count-to="14" data-count-suffix="%">0%</span>
+          <span class="result-label">Reattività muscolare</span>
           <p class="result-desc">Risposta neuromuscolare migliorata grazie all'ottimizzazione dei circuiti motori.</p>
         </div>
         <div class="result-card">
-          <span class="result-value" data-count="89">-89%</span>
+          <div class="result-card-glow"></div>
+          <span class="result-prefix">-</span>
+          <span class="result-value" data-count-to="89" data-count-suffix="%">0%</span>
           <span class="result-label">Errori sotto pressione</span>
-          <p class="result-desc">Riduzione drastica degli errori in situazioni di elevata complessit&agrave; tattica.</p>
+          <p class="result-desc">Riduzione drastica degli errori in situazioni di elevata complessità tattica.</p>
         </div>
         <div class="result-card result-card-highlight">
-          <span class="result-value">&#8593;</span>
-          <span class="result-label">Stabilit&agrave; sotto pressione</span>
+          <div class="result-card-glow"></div>
+          <span class="result-icon-up">
+            <svg viewBox="0 0 32 32" fill="none"><path d="M16 28V4m0 0L6 14m10-10l10 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="result-label">Stabilità sotto pressione</span>
           <p class="result-desc">Maggiore costanza nella performance anche nei momenti critici della competizione.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== QUOTE BREAK ========== -->
+  <section class="section section-quote">
+    <div class="container">
+      <div class="quote-content" data-animate="fade-up">
+        <blockquote class="big-quote">
+          &ldquo;Non alleni le gambe per pensare più veloce.<br>
+          <span class="text-accent">Alleni il cervello per agire prima.</span>&rdquo;
+        </blockquote>
+        <p class="quote-attribution">&mdash; La filosofia GOALMIND</p>
       </div>
     </div>
   </section>
@@ -291,24 +379,30 @@
     <div class="container">
       <div class="offer-header" data-animate="fade-up">
         <p class="section-eyebrow">L'offerta</p>
-        <h2 class="section-title">Scegli il tuo livello<br><span class="text-accent">di performance.</span></h2>
+        <h2 class="section-title section-title-centered">
+          Scegli il tuo livello<br><span class="text-accent">di performance.</span>
+        </h2>
       </div>
       <div class="offer-grid" data-animate="fade-up" data-delay="100">
-        <div class="offer-card">
-          <div class="offer-card-badge">In presenza</div>
-          <h3 class="offer-card-title">GOALMIND<br>Training Lab</h3>
+        <div class="offer-card offer-card-primary">
+          <div class="offer-card-badge">Disponibile ora</div>
+          <h3 class="offer-card-title">GOALMIND<br><span>Training Lab</span></h3>
           <p class="offer-card-desc">Allenamento personalizzato con il nostro team di neuroscienziati e preparatori. Sessioni individuali nel nostro laboratorio con hardware professionale e analisi completa.</p>
           <ul class="offer-features">
-            <li>Sessioni individuali supervisionata</li>
-            <li>Hardware professionale</li>
+            <li>Sessioni individuali supervisionate</li>
+            <li>Hardware professionale dedicato</li>
             <li>Report dettagliato post-sessione</li>
             <li>Piano di allenamento personalizzato</li>
+            <li>Accesso ai dati e metriche NEXT</li>
           </ul>
-          <a href="#contatti" class="btn btn-primary btn-full">Prenota una Sessione</a>
+          <a href="#contatti" class="btn btn-primary btn-full">
+            <span>Prenota una Sessione</span>
+            <svg class="btn-arrow" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
         <div class="offer-card offer-card-locked">
           <div class="offer-card-badge">Coming Soon</div>
-          <h3 class="offer-card-title">GOALMIND<br>Home Lite</h3>
+          <h3 class="offer-card-title">GOALMIND<br><span>Home Lite</span></h3>
           <p class="offer-card-desc">L'allenamento cognitivo-motorio direttamente a casa tua. Accesso alla piattaforma con scenari base e metriche essenziali.</p>
           <ul class="offer-features">
             <li>Accesso piattaforma VR</li>
@@ -320,8 +414,8 @@
         </div>
         <div class="offer-card offer-card-locked">
           <div class="offer-card-badge">Coming Soon</div>
-          <h3 class="offer-card-title">GOALMIND<br>Home Premium</h3>
-          <p class="offer-card-desc">Esperienza completa a domicilio. Tutti gli scenari, algoritmo adattivo avanzato, metriche pro e accesso prioritario alle nuove funzionalit&agrave;.</p>
+          <h3 class="offer-card-title">GOALMIND<br><span>Home Premium</span></h3>
+          <p class="offer-card-desc">Esperienza completa a domicilio. Tutti gli scenari, algoritmo adattivo avanzato, metriche pro e accesso prioritario alle nuove funzionalità.</p>
           <ul class="offer-features">
             <li>Tutti gli scenari disponibili</li>
             <li>Algoritmo adattivo avanzato</li>
@@ -339,11 +433,26 @@
     <div class="container">
       <div class="careers-content" data-animate="fade-up">
         <p class="section-eyebrow">Carriere</p>
-        <h2 class="section-title">Costruisci il futuro<br><span class="text-accent">della performance sportiva.</span></h2>
-        <p class="section-body section-body-large">
-          Cerchiamo menti ambiziose al confine tra neuroscienze, tecnologia e sport. Se pensi che il cervello sia il prossimo campo da conquistare, parliamo.
+        <h2 class="section-title section-title-centered">
+          Costruisci il futuro<br><span class="text-accent">della performance sportiva.</span>
+        </h2>
+        <p class="section-body section-body-large section-body-centered">
+          Cerchiamo menti ambiziose al confine tra neuroscienze, tecnologia e sport.
+          Se pensi che il cervello sia il prossimo campo da conquistare, parliamo.
         </p>
-        <a href="mailto:careers@goalmind.it" class="btn btn-primary">Posizioni Aperte</a>
+        <div class="careers-roles">
+          <span class="careers-role">Neuroscienziati</span>
+          <span class="careers-role-dot"></span>
+          <span class="careers-role">Sviluppatori VR</span>
+          <span class="careers-role-dot"></span>
+          <span class="careers-role">Sport Scientists</span>
+          <span class="careers-role-dot"></span>
+          <span class="careers-role">Data Engineers</span>
+        </div>
+        <a href="mailto:careers@goalmind.it" class="btn btn-primary">
+          <span>Posizioni Aperte</span>
+          <svg class="btn-arrow" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
       </div>
     </div>
   </section>
@@ -353,52 +462,61 @@
     <div class="container">
       <div class="faq-header" data-animate="fade-up">
         <p class="section-eyebrow">FAQ</p>
-        <h2 class="section-title">Domande frequenti.</h2>
+        <h2 class="section-title section-title-centered">Domande frequenti.</h2>
       </div>
       <div class="faq-list" data-animate="fade-up" data-delay="100">
         <div class="faq-item">
-          <button class="faq-question">
+          <button class="faq-question" aria-expanded="false">
             <span>GOALMIND sostituisce l'allenamento tradizionale?</span>
             <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
           </button>
-          <div class="faq-answer">
-            <p>No. GOALMIND &egrave; un complemento all'allenamento fisico e tecnico. Allena la componente cognitiva e neurale della performance &mdash; quella che oggi non viene allenata in modo specifico.</p>
+          <div class="faq-answer" role="region">
+            <p>No. GOALMIND è un complemento all'allenamento fisico e tecnico. Allena la componente cognitiva e neurale della performance &mdash; quella che oggi non viene allenata in modo specifico. Non sostituisce nulla. Completa tutto.</p>
           </div>
         </div>
         <div class="faq-item">
-          <button class="faq-question">
+          <button class="faq-question" aria-expanded="false">
             <span>Su quali basi scientifiche si fonda?</span>
             <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
           </button>
-          <div class="faq-answer">
-            <p>Il protocollo CMDT-VR nasce dalla ricerca del Laboratorio di Neuroscienze Cognitive e dell'Azione dell'Universit&agrave; di Roma Foro Italico. Ogni protocollo &egrave; sviluppato e validato in ambito accademico.</p>
+          <div class="faq-answer" role="region">
+            <p>Il protocollo CMDT-VR nasce dalla ricerca del Laboratorio di Neuroscienze Cognitive e dell'Azione dell'Università di Roma Foro Italico. Ogni protocollo è sviluppato e validato in ambito accademico prima di essere applicato nel prodotto.</p>
           </div>
         </div>
         <div class="faq-item">
-          <button class="faq-question">
-            <span>Per chi &egrave; pensato GOALMIND?</span>
+          <button class="faq-question" aria-expanded="false">
+            <span>Per chi è pensato GOALMIND?</span>
             <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
           </button>
-          <div class="faq-answer">
-            <p>Per calciatori professionisti, staff tecnici, preparatori atletici e sport scientist che vogliono integrare l'allenamento cognitivo-motorio nel loro programma di performance.</p>
+          <div class="faq-answer" role="region">
+            <p>Per calciatori professionisti, staff tecnici, preparatori atletici e sport scientist che vogliono integrare l'allenamento cognitivo-motorio nel loro programma di performance. Per chi compete al massimo livello e cerca il vantaggio che gli altri non vedono.</p>
           </div>
         </div>
         <div class="faq-item">
-          <button class="faq-question">
+          <button class="faq-question" aria-expanded="false">
             <span>Quali risultati posso aspettarmi?</span>
             <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
           </button>
-          <div class="faq-answer">
-            <p>I dati della ricerca mostrano miglioramenti significativi: +12% nella velocit&agrave; decisionale, +14% nella reattivit&agrave; muscolare e -89% negli errori in situazioni complesse. I risultati individuali possono variare in base al profilo dell'atleta.</p>
+          <div class="faq-answer" role="region">
+            <p>I dati della ricerca mostrano miglioramenti significativi: +12% nella velocità decisionale, +14% nella reattività muscolare e -89% negli errori in situazioni complesse. I risultati individuali possono variare in base al profilo cognitivo dell'atleta e alla frequenza di allenamento.</p>
           </div>
         </div>
         <div class="faq-item">
-          <button class="faq-question">
-            <span>Che hardware serve?</span>
+          <button class="faq-question" aria-expanded="false">
+            <span>Che hardware è necessario?</span>
             <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
           </button>
-          <div class="faq-answer">
-            <p>Per le sessioni in laboratorio forniamo noi tutto l'hardware professionale. Per le versioni Home (in arrivo) sar&agrave; necessario un visore VR di ultima generazione &mdash; comunicheremo i requisiti specifici al momento del lancio.</p>
+          <div class="faq-answer" role="region">
+            <p>Per le sessioni in laboratorio forniamo noi tutto l'hardware professionale con tracking multi-modale. Per le versioni Home (in arrivo) sarà necessario un visore VR di ultima generazione &mdash; comunicheremo i requisiti specifici al momento del lancio.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Cos'è il Neuro Execution Time (NEXT)?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>Il NEXT è la metrica proprietaria GOALMIND che misura il tempo tra la percezione di uno stimolo e l'esecuzione della risposta ottimale. È l'indicatore più diretto dell'efficienza del tuo sistema cognitivo-motorio. Ridurre il NEXT significa dominare il gioco.</p>
           </div>
         </div>
       </div>
@@ -411,11 +529,18 @@
       <div class="contact-grid">
         <div class="contact-cta" data-animate="fade-up">
           <p class="section-eyebrow">Inizia ora</p>
-          <h2 class="section-title">Il vantaggio competitivo<br>inizia nel cervello.</h2>
+          <h2 class="section-title">
+            Il vantaggio competitivo<br>
+            <span class="text-accent">inizia nel cervello.</span>
+          </h2>
           <p class="section-body section-body-large">
-            Richiedi accesso a GOALMIND. Sessioni limitate. Solo per chi vuole allenare ci&ograve; che gli altri ignorano.
+            Richiedi accesso a GOALMIND. Sessioni limitate.
+            Solo per chi vuole allenare ciò che gli altri ignorano.
           </p>
-          <a href="mailto:info@goalmind.it" class="btn btn-primary btn-large">Richiedi Accesso Prioritario</a>
+          <a href="mailto:info@goalmind.it" class="btn btn-primary btn-large btn-glow">
+            <span>Richiedi Accesso Prioritario</span>
+            <svg class="btn-arrow" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
           <p class="contact-note">Rispondiamo entro 24 ore. Nessun impegno.</p>
         </div>
         <div class="contact-info" data-animate="fade-up" data-delay="200">
@@ -430,6 +555,10 @@
           <div class="contact-block">
             <h4>Sede</h4>
             <p>Roma, Italia</p>
+          </div>
+          <div class="contact-block">
+            <h4>Partner scientifico</h4>
+            <p>Università di Roma Foro Italico</p>
           </div>
         </div>
       </div>
@@ -455,6 +584,7 @@
       </div>
       <div class="footer-bottom">
         <p>&copy; 2026 GOALMIND. Tutti i diritti riservati.</p>
+        <p class="footer-legal">Basato sulla ricerca del Laboratorio di Neuroscienze Cognitive e dell'Azione &mdash; Università di Roma Foro Italico</p>
       </div>
     </div>
   </footer>
